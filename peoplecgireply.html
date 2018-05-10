@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>People</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>People</h1>
+        <form action="/cgi-bin/peoplecgi.py" method="POST">
+            <div class="form-container">
+                <div class="col label-col">
+                    <label for="key">
+                        Key:
+                    </label>
+                </div>
+                <div class="col">
+                    <input type="text" name="key" id="key" value="$KEY$" checked>
+                </div>
+                <div class="col label-col">
+                    <label for="name">
+                        Name:
+                    </label>
+                </div>
+                <div class="col">
+                    <input type="text" name="name" id="name" value="$NAME$" checked>
+                </div>
+                <div class="col label-col">
+                    <label for="age">
+                        Age:
+                    </label>
+                </div>
+                <div class="col">
+                    <input type="number" name="age" id="age" value="$AGE$" checked>
+                </div>
+                <div class="col label-col">
+                    <label for="job">
+                        Job:
+                    </label>
+                </div>
+                <div class="col">
+                    <input type="text" name="job" id="job" value="$JOB$">
+                </div>
+                <div class="col label-col">
+                    <label for="pay">
+                        Pay:
+                    </label>
+                </div>
+                <div class="col">
+                    <span id="dollar-sign">$</span>
+                    <input type="number" name="pay" id="pay" value="$PAY$">
+                </div>
+                <div class="col">
+
+                </div>
+                <div class="col buttons-row">
+                    <input type="submit" value="Fetch" name="action">
+                    <input type="submit" value="Update" name="action">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

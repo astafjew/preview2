@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 11pt;
+    background: #eaeaea;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    padding: 20px 40px;
+}
+
+.form-container{
+    display: grid;
+    width: 500px;
+    grid-template-columns: 50px 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    background: white;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+}
+
+.label-col{
+    justify-self: end;
+    align-self: center;
+}
+
+.col{
+
+}
+
+h1{
+    font-size: 32pt;
+    font-family: 'Roboto Black', sans-serif;
+    color: #333;
+}
+
+input[type=text]{
+    background: 0;
+    width: 200px;
+    border: 0;
+    border-bottom:2px solid rgb(170, 170, 255);
+    padding: 5px 10px;
+}
+
+input[type=number]{
+    background: 0;
+    width: 100px;
+    border: 0;
+    border-bottom:2px solid rgb(170, 170, 255);
+    padding: 5px 10px;
+}
+
+input[name=pay]{
+    width: calc(100px - 1em - 6px)
+}
+
+#dollar-sign{
+    padding: 5px 0 4px 10px;
+    border-bottom: 2px solid rgb(170, 170, 255);
+    margin: 0 -4px 0 0;
+}
+
+p.hint{
+    font-size: 8pt;
+    text-align: left;
+    color: rgb(180, 180, 180)
+}
+
+input[type=submit]{
+    border: 0;
+    background: rgb(110, 110, 255);
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 5px 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+}
+
+input[value=Update]{
+    background: rgb(110, 110, 255);
+}
+
+input[value=Fetch]{
+    background: rgb(110, 255, 110);
+}
+
+.buttons-row{
+    margin-top: 10px;
+}
