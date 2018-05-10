@@ -1,5 +1,4 @@
 import cgi
-
 import person
 import shelvedb
 import sys
@@ -39,8 +38,7 @@ def update(form) -> None:
     try:
         record = db[key]
     except:
-        print('new')
-        db[key] = fpe.PersonFormEditor.make(form)
+        record = fpe.PersonFormEditor.make(form)
     else:
         record = fpe.PersonFormEditor.edit(record, form)
     db[key] = record
@@ -53,7 +51,8 @@ def reply(key, prsn) -> None:
         stringhtml = ''.join(replyhtml.readlines())
         stringhtml= stringhtml.replace('$KEY$', key)
         for field in fieldnames:
-            stringhtml = stringhtml.replace('${0}$'.format(field.upper()), str(getattr(prsn, field)))
+            stringhtml = stringhtml.replace('${0}$'.format(field.upper()),
+                                            str(getattr(prsn, field)))
         print(stringhtml)
 
 
